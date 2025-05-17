@@ -41,11 +41,11 @@ After activating the plugin, create the following pages and add the correspondin
 
 
 ## 🔄 Changelog
-## [1.0.1] - 2025-05-17
-### Fixed  
+### [1.0.1] - 2025-05-17
+**Fixed**  
 - Fixed screenshots issue
 
-## [1.0.0] - 2025-05-17
+### [1.0.0] - 2025-05-17
 - Initial release
 
 ### Via Git (For Developers)
