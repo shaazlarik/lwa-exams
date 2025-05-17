@@ -3,7 +3,7 @@ Contributors: shaazlarik
 Tags: quizzes, exams, assessments, education
 Requires at least: 6.0
 Tested up to: 6.5
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,15 +26,18 @@ See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/bl
 
 
 == Changelog ==
+= 1.0.1 =
+* Fixed screenshots issue  
+
 = 1.0.0 =
 * Initial release
 
 == Screenshots ==
 1. Exam listing page with available quizzes  
-![Exam Listing](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-1.png)
+![Exam Listing](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-1.png)
 
 2. Take exam screen with question layout  
-![Take Exam](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-2.png)
+![Take Exam](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-2.png)
 
-3. User's attempt history and scores  
-![Attempt History](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-3.png)
+3. Attempt history and scores  
+![Attempt History](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-3.png)

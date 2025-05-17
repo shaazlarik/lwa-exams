@@ -39,6 +39,15 @@ After activating the plugin, create the following pages and add the correspondin
    - Shortcode: `[lwa_attempts]`  
    *(Shows users their past exam attempts and results)*
 
+
+## 🔄 Changelog
+## [1.0.1] - 2025-05-17
+### Fixed  
+- Fixed screenshots issue
+
+## [1.0.0] - 2025-05-17
+- Initial release
+
 ### Via Git (For Developers)
 ```bash
 git clone https://github.com/shaazlarik/lwa-exams.git

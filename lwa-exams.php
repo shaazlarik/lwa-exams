@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Plugin Name: LWA Exams
  * Plugin URI: https://github.com/shaazlarik/lwa-exams
  * Description: Interactive quizzes and results tracking system with detailed reporting and analytics for learners.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: shaazlarik
@@ -16,8 +15,6 @@
  * Icon: icon-256x256.png
  */
 
- 
-
 if (!defined('ABSPATH')) {
     exit();
 }
@@ -25,7 +22,7 @@ if (!defined('ABSPATH')) {
 // Define constants
 define('LWA_EXAMS_PATH', plugin_dir_path(__FILE__));
 define('LWA_EXAMS_URL', plugin_dir_url(__FILE__));
-define('LWA_EXAMS_VERSION', '1.0.0');
+define('LWA_EXAMS_VERSION', '1.0.1');
 
 // 🔄 GitHub Plugin Update Checker
 require_once LWA_EXAMS_PATH . 'plugin-update-checker/plugin-update-checker.php';
