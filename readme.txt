@@ -34,10 +34,10 @@ See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/bl
 
 == Screenshots ==
 1. Exam listing page with available quizzes  
-![Exam Listing](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-1.png)
+![Exam Listing](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-1.png)
 
 2. Take exam screen with question layout  
-![Take Exam](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-2.png)
+![Take Exam](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-2.png)
 
 3. Attempt history and scores  
-![Attempt History](https://raw.githubusercontent.com/shaazlarik/lwa-exams/assets/screenshot-3.png)
+![Attempt History](https://raw.githubusercontent.com/shaazlarik/lwa-exams/main/assets/screenshot-3.png)
