@@ -1,0 +1,18 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore build artifacts
+*.zip
+
+# Ignore dependency directories (if applicable)
+node_modules/
+vendor/
+
+# Ignore environment or config files (optional, if any)
+.env
