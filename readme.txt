@@ -25,6 +25,13 @@ Yes. After activation, create pages with the required shortcodes.
 See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/blob/main/README.md).
 
 == Changelog ==
+= 1.1.0 - 2025-05-24 =
+* Database versioning system added for controlled schema updates
+* correct_answer column in wp_questions table modified to VARCHAR(255)
+* Bumped database version to 1.0.1
+* Optimized plugin structure for compatibility with upcoming features.
+* Stable and backward-compatible — no data loss or breaking changes.
+
 = 1.0.1 - 2025-05-24 =
 * Plugin banner updated
 

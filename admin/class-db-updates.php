@@ -17,7 +17,12 @@ class LWA_EXAMS_DB_Updates
             // Add admin notice hook
             add_action('admin_notices', [__CLASS__, 'show_update_notice']);
 
-            try {             
+            try {
+
+                // Modify correct_answer column
+                if (version_compare($current_db_version, '1.0.1', '<')) {
+                    self::update_to_1_0_1();
+                }
 
                 // If all updates succeeded, update version
                 update_option('lwa_exams_db_version', LWA_EXAMS_DB_VERSION);
@@ -34,6 +39,39 @@ class LWA_EXAMS_DB_Updates
                 // Set error transient
                 set_transient('lwa_exams_db_update_error', $e->getMessage(), 30);
             }
+        }
+    }
+
+    /**
+     * Update to version 1.0.1 - Modify correct_answer column
+     */
+    private static function update_to_1_0_1()
+    {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'questions';
+        $column_name = 'correct_answer';
+
+        // Check if column exists first
+        $column_exists = $wpdb->get_row(
+            $wpdb->prepare(
+                "SHOW COLUMNS FROM {$table_name} LIKE %s",
+                $column_name
+            )
+        );
+
+        if (!$column_exists) {
+            throw new Exception("Column {$column_name} does not exist in {$table_name}");
+        }
+
+        // Modify the column
+        $result = $wpdb->query(
+            "ALTER TABLE {$table_name} 
+            MODIFY COLUMN {$column_name} VARCHAR(255) DEFAULT NULL"
+        );
+
+        if ($result === false) {
+            throw new Exception($wpdb->last_error ?: "Unknown error modifying {$column_name}");
         }
     }
 
