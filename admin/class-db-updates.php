@@ -24,6 +24,11 @@ class LWA_EXAMS_DB_Updates
                     self::update_to_1_0_1();
                 }
 
+                // Modify time_taken_seconds column
+                if (version_compare($current_db_version, '1.0.2', '<')) {
+                    self::update_to_1_0_2();
+                }
+
                 // If all updates succeeded, update version
                 update_option('lwa_exams_db_version', LWA_EXAMS_DB_VERSION);
 
@@ -74,6 +79,41 @@ class LWA_EXAMS_DB_Updates
             throw new Exception($wpdb->last_error ?: "Unknown error modifying {$column_name}");
         }
     }
+
+    /**
+     * Update to version 1.0.2 - Modify time_taken_seconds column
+     */
+
+    private static function update_to_1_0_2()
+    {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'attempts';
+        $column_name = 'time_taken_seconds';
+
+        // Check if column exists first
+        $column_exists = $wpdb->get_row(
+            $wpdb->prepare(
+                "SHOW COLUMNS FROM {$table_name} LIKE %s",
+                $column_name
+            )
+        );
+
+        if (!$column_exists) {
+            throw new Exception("Column {$column_name} does not exist in {$table_name}");
+        }
+
+        // Modify the column to remove UNSIGNED
+        $result = $wpdb->query(
+            "ALTER TABLE {$table_name} 
+         MODIFY COLUMN {$column_name} INT DEFAULT NULL"
+        );
+
+        if ($result === false) {
+            throw new Exception($wpdb->last_error ?: "Unknown error modifying {$column_name}");
+        }
+    }
+
 
 
     /**
