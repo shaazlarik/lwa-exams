@@ -25,6 +25,9 @@ Yes. After activation, create pages with the required shortcodes.
 See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/blob/main/README.md).
 
 == Changelog ==
+= 1.0.1 - 2025-05-24 =
+* Plugin banner updated
+
 = 1.0.0 - 2025-05-24 =
 * Initial Plugin Release
 
