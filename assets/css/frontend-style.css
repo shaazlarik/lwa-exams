@@ -95,12 +95,8 @@
 
 /* Exam Taking Styles */
 .lwa-exam-questions-container {
-
   max-width: 1240px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  border: 1px solid #ddd;
+  margin: 0 auto 30px;
   border-radius: 8px;
 }
 
@@ -109,8 +105,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding-bottom: 15px;
+  padding: 20px;
   border-bottom: 1px solid #eee;
+}
+
+.lwa-exam-header h2 {
+  font-size: 28px;
 }
 
 .lwa-exam-timer {
@@ -118,12 +118,6 @@
   font-weight: 500;
 }
 
-.lwa-question {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 6px;
-}
 
 
 
@@ -133,7 +127,7 @@
 
 
 .lwa-question-image img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   margin-top: 10px;
 }
@@ -153,10 +147,9 @@
 }
 
 .lwa-option-image img {
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
   margin-top: 5px;
-  border: 1px solid #ddd;
 }
 
 .lwa-fib-answer input {
@@ -166,10 +159,7 @@
   border-radius: 4px;
 }
 
-.lwa-exam-footer {
-  margin-top: 30px;
-  text-align: center;
-}
+
 
 .no-answer-message {
   color: #b30000;
@@ -189,9 +179,8 @@
 /* Progress indicator */
 .lwa-exam-progress {
   margin: 20px 0;
-  /* background: #f8f9fa; */
-  background: whilte;
-  padding: 15px;
+  background: white;
+  padding: 20px;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -235,11 +224,12 @@
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+
 }
 
 .lwa-question {
   display: none;
-  padding: 25px;
+  padding: 20px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -279,13 +269,16 @@
 
 /* Results Container */
 .results-container {
-  background-color: var(--white);
-  padding: 30px;
-  border-radius: 5px;
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-  border: 1px solid hsl( 0,0%,91% );
-  box-shadow: 2px 2px 7px rgba( 0, 0, 0, 0.07 );
-  margin-top: 30px;
+  max-width: 1240px;
+  margin: 0 auto 30px;
+  background-color: white;
+  padding: 20px;
+}
+
+.question_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Score Display */
@@ -744,9 +737,8 @@
 
 /* ===== Exam Listing Styles ===== */
 .lwa-exams-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1240px;
+  margin: 0 auto 30px;
 }
 
 .lwa-exams-header {
@@ -866,7 +858,7 @@
 
 .lwa-exam-footer {
   margin-top: auto;
-  padding: 15px 15px 0 15px;
+  padding-top: 15px;
   border-top: 1px solid #f0f2f5;
   display: flex;
   justify-content: space-between;
@@ -894,9 +886,9 @@
 
 /* ===== Exam Start Styles ===== */
 .lwa-exam-start-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1240px;
+  margin: 0 auto 30px;
+  padding: 20px 0;
 }
 
 .lwa-exam-start-header {
@@ -1263,12 +1255,8 @@
 /* ===== User Attempts ===== */
 
 .lwa-attempts-container {
-  margin: 0 auto;
-  padding: 1.5rem;
-  font-family: sans-serif;
-  background-color: #fff;
-  /* border: 1px solid #e0e0e0; */
-  border-radius: 8px;
+  max-width: 1240px;
+  margin: 0 auto 30px;
 }
 
 .lwa-attempts-header {
@@ -1679,11 +1667,7 @@ th.sorted-desc::after {
 }
 
 
-.user-info {
-  font-size: 14px;
-  color: #666;
-  margin-left: 20px;
-}
+
 
 .lwa-login-prompt {
   font-style: italic;

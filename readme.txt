@@ -25,6 +25,14 @@ Yes. After activation, create pages with the required shortcodes.
 See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/blob/main/README.md).
 
 == Changelog ==
+= 1.1.2 - 2025-05-25 =
+* Improved UI/UX with updated CSS styles
+* Enhanced layout and spacing for cleaner interface
+* Better color contrast for accessibility compliance
+* Optimized responsiveness for mobile and tablet devices
+* Minor visual tweaks and transition enhancements
+* Cleaned up redundant styles for improved performance
+
 = 1.1.1 - 2025-05-24 =
 * Fixed Exam Timer Column Update
 * Fixed `time_taken_seconds` column by removing `UNSIGNED` to support accurate time tracking

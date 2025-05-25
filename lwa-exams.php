@@ -3,7 +3,7 @@
  * Plugin Name: LWA Exams
  * Plugin URI: https://github.com/shaazlarik/lwa-exams
  * Description: Interactive quizzes and results tracking system with detailed reporting and analytics for learners.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: shaazlarik
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 // Define constants
 define('LWA_EXAMS_PATH', plugin_dir_path(__FILE__));
 define('LWA_EXAMS_URL', plugin_dir_url(__FILE__));
-define('LWA_EXAMS_VERSION', '1.1.1');
+define('LWA_EXAMS_VERSION', '1.1.2');
 define('LWA_EXAMS_DB_VERSION', '1.0.2');
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
