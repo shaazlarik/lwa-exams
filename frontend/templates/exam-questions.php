@@ -111,8 +111,8 @@
         </div>
 
         <div class="lwa-exam-navigation">
-            <button type="button" class="lwa-button lwa-prev-question" disabled>Previous</button>
-            <button type="button" class="lwa-button lwa-next-question">Next</button>
+            <button type="button" id="prevBtn" class="lwa-button lwa-prev-question" disabled>Previous</button>
+            <button type="button" id="nextBtn" class="lwa-button lwa-next-question">Next</button>
             <button type="submit" class="lwa-button lwa-submit-exam" style="display: none;">Submit Exam</button>
         </div>
     </form>

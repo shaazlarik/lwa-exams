@@ -256,6 +256,12 @@ jQuery(document).ready(function ($) {
             updateNavigation();
         }
 
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && !prevBtn.disabled) prevBtn.click();
+            if (e.key === 'ArrowRight' && !nextBtn.disabled) nextBtn.click();
+        });
+
         function updateProgress() {
             const progressPercent = (attemptedQuestions.size / totalQuestions) * 100;
             $('.lwa-progress-completed').css('width', progressPercent + '%');

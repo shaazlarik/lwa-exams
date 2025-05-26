@@ -1,4 +1,9 @@
 ## 📝 Changelog
+### v1.2.0 – 2025-05-26
+- Added support for keyboard navigation using left/right arrow keys for switching questions
+- Enhanced user experience with smoother navigation controls
+- Updated various CSS properties for improved layout and design consistency
+
 ### v1.1.2 – 2025-05-25
 - Improved UI/UX with updated CSS styles
 - Enhanced layout and spacing for cleaner interface
