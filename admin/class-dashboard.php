@@ -474,11 +474,6 @@ class LWA_EXAMS_Dashboard
             $attempt->exam_id
         ));
 
-
-
-
-
-
         // Add back button
         $back_url = admin_url('admin.php?page=lwa-exams');
         $back_button = '<a href="' . esc_url($back_url) . '" class="button" style="margin-bottom: 20px;">&larr; Back to Dashboard</a>';
@@ -538,7 +533,7 @@ class LWA_EXAMS_Dashboard
         $offset = ($current_page - 1) * $per_page;
 
         // Add ORDER BY and LIMIT to main query
-        $query .= ' ORDER BY a.end_time DESC LIMIT %d OFFSET %d';
+        $query .= ' ORDER BY a.start_time DESC LIMIT %d OFFSET %d';
 
         // Get total count of items (for pagination)
         if (!empty($params)) {

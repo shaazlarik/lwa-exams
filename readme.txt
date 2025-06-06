@@ -25,6 +25,13 @@ Yes. After activation, create pages with the required shortcodes.
 See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/blob/main/README.md).
 
 == Changelog ==
+= v1.2.1 – 2025-06-06 =
+* Fixed cache issues preventing real-time exam result updates
+* Added comprehensive cache prevention for all exam pages
+* Ensured proper timestamp recording for abandoned exams
+* Removed redundant cache headers from template files
+* Centralized cache control logic in authentication handler
+
 = 1.2.0 - 2025-05-26 =
 * Added support for keyboard navigation using left/right arrow keys for switching questions
 * Enhanced user experience with smoother navigation controls

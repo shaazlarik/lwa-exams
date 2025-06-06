@@ -134,12 +134,14 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
 
         if (confirm('Are you sure you want to submit your exam? You cannot change your answers after submission.')) {
-            submitExam();
+            // submitExam();
         }
     });
 
     // In the submitExam() function, update the answer processing logic:
     function submitExam() {
+        if (window.lwa_exam_submitted) return; // Prevent double submission
+        window.lwa_exam_submitted = true;
         window.onbeforeunload = null; // Clear warning first
 
         const form = $('#lwa-exam-form');
@@ -203,9 +205,11 @@ jQuery(document).ready(function ($) {
         });
     }
 
+
     // Prevent accidental navigation away from exam
     if ($('#lwa-exam-form').length) {
         window.onbeforeunload = function () {
+
             return 'Are you sure you want to leave? Your exam progress will be lost.';
         };
 

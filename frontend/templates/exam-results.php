@@ -23,8 +23,14 @@
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📅</div>
-                <div class="stat-value"><?= date('M j, Y g:i a', strtotime($attempt->end_time)); ?></div>
-                <div class="stat-label">Completed</div>
+                <div class="stat-value">
+                    <?= !empty($attempt->end_time) ? date('M j, Y g:i a', strtotime($attempt->end_time)) : date('M j, Y g:i a', strtotime($attempt->start_time)); ?>
+                </div>
+                <div class="stat-label"><?= !empty($attempt->end_time) ? 'Completed' : 'Abandoned' ?>
+                    <?php if (empty($attempt->end_time)): ?>
+                        <span class="tooltip-icon" title="This exam was started but not completed.">ⓘ</span>
+                    <?php endif ?>
+                </div>
             </div>
         </div>
 
@@ -56,7 +62,7 @@
                 if ($user && !empty($user->display_name)) {
                     echo '<p>By: ' . '<strong>' . esc_html($user->display_name) . '</strong></p>';
                 } else {
-                    echo '<p>By user ID: ' . '<strong>' .esc_html($attempt->user_id) . '</strong></p>';
+                    echo '<p>By user ID: ' . '<strong>' . esc_html($attempt->user_id) . '</strong></p>';
                 }
                 ?>
             </div>

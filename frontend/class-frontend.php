@@ -63,7 +63,6 @@ class LWA_EXAMS_Frontend
         }
     }
 
-
     public function verify_authentication()
     {
         global $post;
@@ -71,12 +70,22 @@ class LWA_EXAMS_Frontend
         $require_auth = apply_filters('lwa_exams_require_auth', true);
         if (!$require_auth) return;
 
-        // Only check on our plugin pages
         if (is_a($post, 'WP_Post') && (
-
             has_shortcode($post->post_content, 'lwa_exam') ||
             has_shortcode($post->post_content, 'lwa_attempts')
         )) {
+            // Enhanced cache prevention
+            if (!headers_sent()) {
+                nocache_headers();
+                header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+                header("Cache-Control: post-check=0, pre-check=0", false);
+                header("Pragma: no-cache");
+            }
+
+            if (!defined('DONOTCACHEPAGE')) {
+                define('DONOTCACHEPAGE', true);
+            }
+
             $this->check_authentication();
         }
     }
@@ -116,10 +125,10 @@ class LWA_EXAMS_Frontend
 
     public function render_exam_list($atts)
     {
-
-        // Prevent caching for logged-in users
-        if (is_user_logged_in()) {
-            nocache_headers();
+        // Prevent caching for this page
+        nocache_headers();
+        if (!defined('DONOTCACHEPAGE')) {
+            define('DONOTCACHEPAGE', true);
         }
 
         global $wpdb;
@@ -190,7 +199,6 @@ class LWA_EXAMS_Frontend
 
     public function render_exam_interface($atts)
     {
-
         $this->check_authentication();
 
         if (!is_user_logged_in()) {
@@ -307,6 +315,7 @@ class LWA_EXAMS_Frontend
 
     protected function render_exam_results($exam)
     {
+
         global $wpdb;
         $user_id = get_current_user_id();
 

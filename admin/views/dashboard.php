@@ -141,14 +141,23 @@ $stats = [
                         <td data-colname="Exam"><?php echo esc_html($attempt->title); ?></td>
                         <td data-colname="Date">
                             <?php
-                            if ($attempt->end_time) {
-                                echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), strtotime($attempt->end_time)));
-                            } else {
-                                echo esc_html__('Not completed', 'lwa-exams');
+                            if ($attempt->start_time) {
+                                echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), strtotime($attempt->start_time)));
                             }
                             ?>
                         </td>
-                        <td data-colname="Score"><?php echo esc_html($attempt->score); ?>%</td>
+
+
+                        <td data-colname="Score">
+                            <?php
+                            if ($attempt->end_time) {
+                                echo esc_html($attempt->score); ?>/<?php echo esc_html($attempt->total_questions);
+                                                                } else {
+                                                                    echo esc_html__('Abandoned', 'lwa-exams');
+                                                                } ?>
+                        </td>
+
+
                         <td data-colname="Result">
                             <?php if ($attempt->passed) : ?>
                                 <span class="dashicons dashicons-yes" style="color: green;"></span> Passed

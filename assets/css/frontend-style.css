@@ -1667,10 +1667,14 @@ th.sorted-desc::after {
 }
 
 
-
-
 .lwa-login-prompt {
   font-style: italic;
   color: #666;
   margin-right: 10px;
+}
+
+.tooltip-icon {
+  cursor: help;
+  margin-left: 5px;
+  color: #888;
 }
