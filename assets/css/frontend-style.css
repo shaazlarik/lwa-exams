@@ -547,14 +547,6 @@
   }
 
 
-  /* .lwa-attempts-table {
-    display: block;
-    overflow-x: auto;
-  } */
-
-  .tab-buttons {
-    flex-direction: column;
-  }
 
   .actions {
     flex-direction: column;

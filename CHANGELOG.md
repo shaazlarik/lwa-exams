@@ -1,10 +1,15 @@
 ## 📝 Changelog
+### v1.2.2 – 2025-06-06
+- Fixed form submission bug where exam answers weren't being processed
+- Adjusted results page styling for better score visibility
+- Optimized confirmation dialog flow during exam submission
+
 ### v1.2.1 – 2025-06-06
-Fixed cache issues preventing real-time exam result updates
-Added comprehensive cache prevention for all exam pages
-Ensured proper timestamp recording for abandoned exams
-Removed redundant cache headers from template files
-Centralized cache control logic in authentication handler
+- Fixed cache issues preventing real-time exam result updates
+- Added comprehensive cache prevention for all exam pages
+- Ensured proper timestamp recording for abandoned exams
+- Removed redundant cache headers from template files
+- Centralized cache control logic in authentication handler
 
 ### v1.2.0 – 2025-05-26
 - Added support for keyboard navigation using left/right arrow keys for switching questions

@@ -25,6 +25,11 @@ Yes. After activation, create pages with the required shortcodes.
 See full documentation in [README.md](https://github.com/shaazlarik/lwa-exams/blob/main/README.md).
 
 == Changelog ==
+= v1.2.2 – 2025-06-06 =
+* Fixed form submission bug where exam answers weren't being processed
+* Adjusted results page styling for better score visibility
+* Optimized confirmation dialog flow during exam submission
+
 = v1.2.1 – 2025-06-06 =
 * Fixed cache issues preventing real-time exam result updates
 * Added comprehensive cache prevention for all exam pages
