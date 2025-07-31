@@ -128,7 +128,8 @@
                                 <ul class="option-list">
                                     <?php foreach (['A', 'B', 'C', 'D'] as $option):
                                         $option_key = 'option_' . strtolower($option);
-                                        if (!empty($answer->$option_key)): ?>
+                                        $option_image_key = $option_key . '_image';
+                                        if (!empty($answer->$option_key) || !empty($answer->$option_image_key)): ?>
                                             <li class="option-item">
                                                 <?php
                                                 $is_selected = false;

@@ -1,4 +1,11 @@
 ## 📝 Changelog
+### v1.2.3 – 2025-07-31
+- Fixed results display for image-only options in multiple choice/select questions
+- Ensured all question options (text or image) appear in exam results
+- Enhanced option display styling in detailed answers view
+- Improved consistency between exam and results interfaces
+- Refined progress bar animation timing
+
 ### v1.2.2 – 2025-06-06
 - Fixed form submission bug where exam answers weren't being processed
 - Adjusted results page styling for better score visibility
